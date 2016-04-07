@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="P2 Fun"
+            id="com.ibm.pradeepb.p2.sitesgc.commands.category">
+      </category>
+      <command
+            name="P2 GC"
+            categoryId="com.ibm.pradeepb.p2.sitesgc.commands.category"
+            id="com.ibm.pradeepb.p2.sitesgc.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.ibm.pradeepb.p2.sitesgc.commands.sampleCommand"
+            class="com.ibm.pradeepb.p2.sitesgc.handlers.SampleHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.ibm.pradeepb.p2.sitesgc.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="P2 GC"
+               mnemonic="M"
+               id="com.ibm.pradeepb.p2.sitesgc.menus.sampleMenu">
+            <command
+                  commandId="com.ibm.pradeepb.p2.sitesgc.commands.sampleCommand"
+                  mnemonic="S"
+                  id="com.ibm.pradeepb.p2.sitesgc.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.ibm.pradeepb.p2.sitesgc.toolbars.sampleToolbar">
+            <command
+                  commandId="com.ibm.pradeepb.p2.sitesgc.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  tooltip="P2 GC"
+                  id="com.ibm.pradeepb.p2.sitesgc.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

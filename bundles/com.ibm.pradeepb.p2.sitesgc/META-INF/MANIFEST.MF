@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sitesgc
+Bundle-SymbolicName: com.ibm.pradeepb.p2.sitesgc;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ibm.pradeepb.p2.sitesgc.Activator
+Bundle-Vendor: IBM
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.equinox.p2.repository;bundle-version="2.3.200",
+ org.eclipse.equinox.p2.core;bundle-version="2.4.100",
+ org.eclipse.equinox.p2.metadata;bundle-version="2.3.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
